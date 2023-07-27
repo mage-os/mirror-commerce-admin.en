@@ -7,6 +7,16 @@ role: Admin, Developer
 ---
 # Install the [!DNL B2B for Adobe Commerce] extension
 
+Before installing the B2B module, ensure that your Adobe Commerce instance meets the following requirements
+
+- Adobe Commerce 2.2.0 or later installed
+
+
+  
+
+
+The B2B for Adobe Commerce extension is available only for Adobe Commerce 2.2.0 or later. It is installed after installing Adobe Commerce
+
 >[!IMPORTANT]
 >
 >The B2B for Adobe Commerce extension is only available for Adobe Commerce v2.2.0 or later. It is installed after installing Adobe Commerce.
