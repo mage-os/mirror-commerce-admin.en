@@ -7,12 +7,28 @@ role: Admin, Developer
 ---
 # Install the [!DNL B2B for Adobe Commerce] extension
 
-The B2B for Adobe Commerce extension can be installed after installing Adobe Commerce version 2.2.0 or later. 
+These installation instructions apply to Adobe Commerce deployed on premises. Installation instructions for projects deployed on cloud infrastructure are available in the [Commerce Cloud Infrastructure Guide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/b2b-module.html).
 
-- These installation instructions apply to Adobe Commerce deployed on premises.
-- Installation instructions for projects deployed on cloud infrastructure are available in the [Commerce Cloud Infrastructure Guide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/b2b-module.html).
-  
-Install the most recent version of the B2B extension that is supported on the deployed Adobe Commerce version. See [Product Availability](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html#compatibility) in the _Adobe Commerce Release Information_.
+Install the most recent version of the B2B extension that is supported on the deployed Adobe Commerce version.
+
+## Requirements
+
+- Adobe Commerce version 2.3.x or later version deployed on-premises.
+- Determine the most recent version of the B2B extensioin supported on the deployed Adobe Commerce version. See [Product Availability](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html#compatibility) in the _Adobe Commerce Release Information_.
+- Valid [authentication keys](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html) to download Adobe Commerce extensions.
+
+  Save authentication keys for installation by defining them globally in your [COMPOSER_HOME](https://getcomposer.org/doc/03-cli.md#composer-home) directory. Or, create an `auth.json` file in the Adobe Commerce application root directory and add the following code, using the actual values of your `public_key` and `private_key` for `username` and `password`:
+
+   ```json
+   {
+      "http-basic": {
+         "repo.magento.com": {
+            "username": "<public_key>",
+            "password": "<private_key>"
+         }
+      }
+   }
+   ```
 
 1. From the Adobe Commerce installation directory, update your `composer.json` file and install the [!DNL B2B for Adobe Commerce] extension:
 
@@ -28,22 +44,9 @@ Install the most recent version of the B2B extension that is supported on the de
 
    Check the package spelling, your version constraint, and that the package is available and matches your minimum-stability (stable) requirement.
 
-   If not already defined globally in your [COMPOSER_HOME](https://getcomposer.org/doc/03-cli.md#composer-home), you must create an `auth.json` file in the root directory and add the following code, using the actual values of your `public_key` and `private_key` for `username` and `password`:
+1. If prompted, enter your [authentication keys](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html).
 
-   ```json
-   {
-      "http-basic": {
-         "repo.magento.com": {
-            "username": "<public_key>",
-            "password": "<private_key>"
-         }
-      }
-   }
-   ```
-
-1. When prompted, enter your [authentication keys](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html).
-
-   Your _public key_ is your username; your _private key_ is your password. If you have stored your public and private keys in `auth.json`, you aren't asked to enter them here.
+   Your _public key_ is your username; your _private key_ is your password. If you have stored your public and private keys in `auth.json`, you are not prompted to authenticate.
 
 1. Run the following commands after Composer finishes updating modules:
 
