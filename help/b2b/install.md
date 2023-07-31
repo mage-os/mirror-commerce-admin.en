@@ -13,22 +13,13 @@ Install the most recent version of the B2B extension that is supported on the de
 
 ## Requirements
 
-- Adobe Commerce version 2.3.x or later version deployed on-premises.
-- Determine the most recent version of the B2B extensioin supported on the deployed Adobe Commerce version. See [Product Availability](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html#compatibility) in the _Adobe Commerce Release Information_.
+- Adobe Commerce version 2.3.x or later
+- [Supported version of the B2B extension](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html#compatibility)
 - Valid [authentication keys](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html) to download Adobe Commerce extensions.
 
-  Save authentication keys for installation by defining them globally in your [COMPOSER_HOME](https://getcomposer.org/doc/03-cli.md#composer-home) directory. Or, create an `auth.json` file in the Adobe Commerce application root directory and add the following code, using the actual values of your `public_key` and `private_key` for `username` and `password`:
+  Save authentication keys for installation by defining them globally in your [COMPOSER_HOME](https://getcomposer.org/doc/03-cli.md#composer-home) directory. Or, save them to an `[auth.json](https://developer.adobe.com/commerce/contributor/guides/install/clone-repository/#authentication-file))` file in the Adobe Commerce application root directory.
 
-   ```json
-   {
-      "http-basic": {
-         "repo.magento.com": {
-            "username": "<public_key>",
-            "password": "<private_key>"
-         }
-      }
-   }
-   ```
+## Installation steps
 
 1. From the Adobe Commerce installation directory, update your `composer.json` file and install the [!DNL B2B for Adobe Commerce] extension:
 
@@ -70,7 +61,7 @@ Install the most recent version of the B2B extension that is supported on the de
    >
    >In Production mode, you might receive a message to `Please rerun Magento compile command`. Enter the commands to complete the installation. Adobe Commerce does not prompt you to run the compile command in Developer mode.
 
-After completing the installation, complete post-installation steps to configure and start message consumers, including [specifying parameters for message consumers](#specify-parameters-for-message-consumers).
+After completing the installation, configure and start message consumers, including [specifying parameters for message consumers](#specify-parameters-for-message-consumers).
 
 ## Message consumers
 
@@ -90,7 +81,22 @@ The [!DNL B2B for Adobe Commerce] extension uses MySQL for message queue managem
 
 {style="table-layout:auto"}
 
+>![NOTE]
+>Fo details, see [Manage Message Consumers](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/consumers.html).
+
+### Configure message consumers
+
+Prevent possible processing issues or delays by configuring the following processing parameters for message consumers.
+
+- `--max-messages`: manages the consumer's lifetime and allows you to specify the maximum number of messages processed by the consumer. The best practice for a PHP application is to restart long-running processes to prevent possible memory leaks.
+
+- `--batch-size`: allows you to limit the system resources consumed by the consumers (CPU, memory). Using smaller batches reduces resource usage and, thus, leads to slower processing.
+
+For details, see [Message consumers configuration](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html) in the _Adobe Commerce Configuration Guide_.
+
 ### Start message consumers
+
+The following instructions provide information about managing message consumers using Commerce CLI commands, you can also view and manage the message consumer configuration from the Store Configuration menu. See 
 
 1. List the available message consumers:
 
@@ -117,31 +123,23 @@ The [!DNL B2B for Adobe Commerce] extension uses MySQL for message queue managem
    For example:
 
    ```bash
-   bin/magento queue:consumers:start sharedCatalogUpdatePrice
+   bin/magento queue:consumers:start quoteItemCleaner
    ```
 
 >[!TIP]
 >
 >To run it in the background, append `&` to the command, return to a prompt, and continue running commands. For example: `bin/magento queue:consumers:start sharedCatalogUpdatePrice &`.
 
-Refer to [Manage message queues](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html) in the _Configuration Guide_ for more information.
+For more information, see [Manage message queues](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html) in the _Configuration Guide_.
 
 ### Add message consumers to cron
 
-You can also add these two message consumers to the cron job (optional) by adding the following lines in your `crontab`:
+You have the option to automatically run message consumers on a schedule by updating the Adobe Commerce cron configuration. For example, if you use Shared Catalogs, add the `SharedCatalogUpdateCategoryPermissions` and `SharedCatalogUpdatePrice` message consumers to the cron configuration file (`[/app/code/Magento/MessageQueue/etc/crontab.xml](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html#process-management)`
 
 ```terminal
 * * * * * ps ax | grep [s]haredCatalogUpdateCategoryPermissions >>/dev/null 2>&1 || nohup php /var/www/html/magento2/bin/magento queue:consumers:start sharedCatalogUpdateCategoryPermissions &
 * * * * * ps ax | grep [s]haredCatalogUpdatePrice >>/dev/null 2>&1 || nohup php /var/www/html/magento2/bin/magento queue:consumers:start sharedCatalogUpdatePrice &
 ```
-
-### Specify parameters for message consumers
-
-Depending on your system configuration, to prevent possible issues, specify the following parameters when starting the services:
-
-- `--max-messages`: manages the consumer's lifetime and allows you to specify the maximum number of messages processed by the consumer. The best practice for a PHP application is to restart long-running processes to prevent possible memory leaks.
-
-- `--batch-size`: allows you to limit the system resources consumed by the consumers (CPU, memory). Using smaller batches reduces resource usage and, thus, leads to slower processing.
 
 ## Enable B2B features in the Admin
 
