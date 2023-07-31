@@ -7,41 +7,26 @@ role: Admin, Developer
 ---
 # Install the [!DNL B2B for Adobe Commerce] extension
 
-Before installing the B2B module, ensure that your Adobe Commerce instance meets the following requirements
+The B2B for Adobe Commerce extension can be installed after installing Adobe Commerce version 2.2.0 or later. 
 
-- Adobe Commerce 2.2.0 or later installed
-
-
+- These installation instructions apply to Adobe Commerce deployed on premises.
+- Installation instructions for projects deployed on cloud infrastructure are available in the [Commerce Cloud Infrastructure Guide](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/b2b-module.html).
   
+Install the most recent version of the B2B extension that is supported on the deployed Adobe Commerce version. See [Product Availability](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html#compatibility) in the _Adobe Commerce Release Information_.
 
-
-The B2B for Adobe Commerce extension is available only for Adobe Commerce 2.2.0 or later. It is installed after installing Adobe Commerce
-
->[!IMPORTANT]
->
->The B2B for Adobe Commerce extension is only available for Adobe Commerce v2.2.0 or later. It is installed after installing Adobe Commerce.
-
->[!NOTE]
->
->For Adobe Commerce on cloud infrastructure projects, see [Enable the B2B module](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/configure-store/b2b-module.html) in the _Commerce on Cloud Infrastructure Guide_.
-
-1. Change to your Adobe Commerce installation directory and enter the following command to update your `composer.json` file and install the [!DNL B2B for Adobe Commerce] extension:
+1. From the Adobe Commerce installation directory, update your `composer.json` file and install the [!DNL B2B for Adobe Commerce] extension:
 
    ```bash
    composer require magento/extension-b2b:<version>
    ```
-
-   >[!NOTE]
-   >
-   >The [Compatible B2B extension version](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html#compatibility) must be specified in the command, which can be found in the left column of the [compatibility table](https://experienceleague.adobe.com/docs/commerce-operations/release/product-availability.html#compatibility).
-
-   If you get an error when trying to install the B2B extension for a local instance of Adobe Commerce for example:
+   
+   If an error occurs, for example:
 
    ```terminal
    [InvalidArgumentException] Could not find a matching version of package magento/extension-b2b.
    ```
 
-   Check the package spelling, your version constraint, and that the package is available and matches your minimum-stability (stable).
+   Check the package spelling, your version constraint, and that the package is available and matches your minimum-stability (stable) requirement.
 
    If not already defined globally in your [COMPOSER_HOME](https://getcomposer.org/doc/03-cli.md#composer-home), you must create an `auth.json` file in the root directory and add the following code, using the actual values of your `public_key` and `private_key` for `username` and `password`:
 
@@ -78,13 +63,11 @@ The B2B for Adobe Commerce extension is available only for Adobe Commerce 2.2.0 
    bin/magento cache:clean
    ```
 
->[!NOTE]
->
->In Production mode, you may receive a message to `Please rerun Magento compile command`. Enter the commands. Adobe Commerce does not prompt you to run the compile command in Developer mode.
+   >[!NOTE]
+   >
+   >In Production mode, you might receive a message to `Please rerun Magento compile command`. Enter the commands to complete the installation. Adobe Commerce does not prompt you to run the compile command in Developer mode.
 
->[!IMPORTANT]
->
->After completing the installation, you must follow the [post-installation steps](#specify-parameters-for-message-consumers).
+After completing the installation, complete post-installation steps to configure and start message consumers, including [specifying parameters for message consumers](#specify-parameters-for-message-consumers).
 
 ## Message consumers
 
