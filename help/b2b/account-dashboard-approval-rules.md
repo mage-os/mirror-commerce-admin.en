@@ -54,7 +54,7 @@ To create an approval rule, a customer completes the following steps:
 
    The following sections provide a detailed explanation and example for each rule type.
 
-   ![Creating a new approval rule](./assets/approval-rules-create.png){width="700" zoomable="yes"}
+   ![Creating a new approval rule](./assets/approval-rules-create.png){width="600" zoomable="yes"}
 
 1. For **[!UICONTROL Requires approval from]**, chooses one or more required approvers according to the type of approval.
 
@@ -79,7 +79,7 @@ This rule type is used to require a PO approval based on the order total, includ
 
 1. Selects the currency type and enter the amount.
 
-![Order Total Approval Rule](./assets/approval-rules-order-total.png){width="600" zoomable="yes"}
+   ![Order Total Approval Rule](./assets/approval-rules-order-total.png){width="600" zoomable="yes"}
 
 ### [!UICONTROL Shipping Cost]
 
@@ -94,7 +94,7 @@ This rule type is used to require a PO approval based on shipping cost, which ma
 
 1. Sets the desired shipping amount.
 
-![Shipping Cost Approval Rule](./assets/approval-rules-shipping-cost.png){width="600" zoomable="yes"}
+  ![Shipping Cost Approval Rule](./assets/approval-rules-shipping-cost.png){width="600" zoomable="yes"}
 
 ### [!UICONTROL Number of SKUs]
 
@@ -114,7 +114,7 @@ This example specifies five items, but two distinct SKUs.
 
 1. Sets the quantity of SKUs.
 
-![Number of SKUs Approval Rule](./assets/approval-rules-number-skus.png){width="600" zoomable="yes"}
+   ![Number of SKUs Approval Rule](./assets/approval-rules-number-skus.png){width="600" zoomable="yes"}
 
 ## Edit approval rules
 
