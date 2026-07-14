@@ -93,3 +93,11 @@ Cart price rule - Free Gift Label{width="600" zoomable="yes"}
 1. When your rule is complete, click **[!UICONTROL Save Rule]**.
 2. Test the rule to make sure that it works correctly.
 
+## Variations
+
+Free Gift is processed as a single action. 
+
+2 Different Discount Type available
+
+  Price based : gift line item is added at price 0.
+  Discount Based: full discount applied to the gift line item.
