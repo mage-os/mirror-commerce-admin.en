@@ -3,7 +3,6 @@ title: Catalog enrichment
 description: Use the native catalog enrichment capability in Adobe Commerce to review and apply AI-suggested improvements to product names and long descriptions for LLM and AI-assisted discovery.
 role: Admin, User, Leader
 recommendations: noCatalog
-hide: true
 badgePaas: label="PaaS only" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Applies to Adobe Commerce on Cloud projects (Adobe-managed PaaS infrastructure) and on-premises projects only."
 autotag-review: '2026-06-23T17:36:07.142Z'
 TQID: 'https://experienceleague.adobe.com/cjHuva7PP7UzP-yVhe0rkDzHgAYjfSdYEx3g5gorxwk'
@@ -35,11 +34,11 @@ Catalog enrichment is a native [!DNL Adobe Commerce] capability that helps you i
 
 >[!NOTE]
 >
->Catalog enrichment is powered by [!DNL Adobe LLM Optimizer] behind the scenes. You use enrichment as part of your Commerce catalog workflow. You do not manage a separate LLM Optimizer integration to apply approved name and description updates. For broader LLM monitoring and optimization outside Commerce, see the [LLM Optimizer product documentation](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/home).
+>Catalog enrichment is powered by [!DNL Commerce Catalog Agent] and [!DNL Adobe LLM Optimizer] behind the scenes. You use enrichment as part of your Commerce catalog workflow. You do not manage a separate LLM Optimizer integration to apply approved name and description updates. For broader LLM monitoring and optimization outside Commerce, see the [LLM Optimizer product documentation](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/home).
 
 ## How it works {#how-it-works}
 
-Your [!DNL Adobe Commerce] product catalog is the system of record for product data: names, descriptions, attributes, pricing, and inventory. Adobe Commerce Storefront MCP (Model Context Protocol) connects live catalog data to Adobe AI experiences. From there, the Catalog Agent uses that interface so [!DNL Adobe LLM Optimizer] can identify gaps in product names and long descriptions, propose improvements, and write approved changes back to Commerce so you can review them in the Commerce Admin.
+Your [!DNL Adobe Commerce] product catalog is the system of record for product data: names, descriptions, attributes, pricing, and inventory. [!DNL Adobe Commerce] Storefront MCP (Model Context Protocol) connects live catalog data to Adobe AI experiences. From there, the Catalog Agent can identify gaps in product names and long descriptions, propose improvements, and write approved changes back to Commerce so you can review them in the Commerce Admin.
 
 With catalog enrichment, you can:
 
@@ -66,10 +65,13 @@ The following prerequisites apply when you have access to catalog enrichment.
 
 - Your storefront can be crawled by LLM-oriented and agentic bots where crawl coverage is required for catalog-aware suggestions.
 - Required Commerce services and catalog connectivity are enabled and healthy. See [Enable catalog enrichment](#enable-catalog-enrichment) to learn more.
-- [IMS is configured)](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations).
+- [IMS is configured](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations).
 - You have access to the [Adobe Admin Console](https://helpx.adobe.com/business/enterprise/plan-your-deployment/basic-concepts/admin-console.html).
+- Your organization has signed the GenAI rider, or explicitly opted out, for the underlying AI services.
 
-> If you do not have an IMS organization, contact your Adobe account team to provision one.
+>[!NOTE]
+>
+>As part of setup, Commerce checks whether your organization has signed the GenAI rider that covers the AI services behind catalog enrichment. If you have not yet signed the rider or opted out, you are prompted to sign or update the rider before you can use catalog enrichment.
 
 ## Enable catalog enrichment {#enable-catalog-enrichment}
 
@@ -96,7 +98,7 @@ After you install the catalog enrichment and catalog services extensions, the ca
 
 ### Configure catalog enrichment
 
-Configure catalog enrichment on the **[!UICONTROL Settings]** tab so Adobe LLM Optimizer can connect to your [!DNL Adobe Commerce] environment and surface suggestions in the Commerce Admin.
+Configure catalog enrichment on the **[!UICONTROL Settings]** tab so [!DNL Commerce Catalog Agent] can connect to your [!DNL Adobe Commerce] environment and surface suggestions in the Commerce Admin.
 
 1. In the Admin, go to **[!UICONTROL Catalog]** > **[!UICONTROL Catalog Enrichment]**.
 1. In the **[!UICONTROL Scope]** list at the top of the page, select the store view you want to configure, or leave **[!UICONTROL All Store Views]** to manage settings across store views.
@@ -110,14 +112,9 @@ Configure catalog enrichment on the **[!UICONTROL Settings]** tab so Adobe LLM O
 1. Enter the required connection details for the store view.
 
     - **[!UICONTROL Store View URL]**: URL corresponding to the store view (for example, `https://brand.example.com/fr/`).
-    - **[!UICONTROL Environment ID]**: Unique identifier for the Adobe Commerce environment that the connection accesses.
+    - **[!UICONTROL Environment ID]**: Unique identifier for the [!DNL Adobe Commerce] environment that the connection accesses.
     - **[!UICONTROL Website Code]**, **[!UICONTROL Store Code]**, and **[!UICONTROL Store View Code]**: Website, store, and store view codes for the Commerce website. These values must match the codes in your Commerce Admin.
-
-1. Optional: Enter **[!UICONTROL Host Name]** and **[!UICONTROL API Key]** if your environment requires them.
-
-    - **[!UICONTROL Host Name]**: Host name of your Adobe Commerce instance.
-    - **[!UICONTROL Adobe Commerce Endpoint]**: This field is not used.
-    - **[!UICONTROL API Key]**: Authentication key used to securely access Adobe Commerce APIs. Click **[!UICONTROL Copy]** next to the field if you need to copy the key elsewhere.
+    - **[!UICONTROL Host Name]**: Host name of your [!DNL Adobe Commerce] instance.
 
 1. Click **[!UICONTROL Save]**.
 
@@ -132,13 +129,11 @@ Required fields are marked with an asterisk (*) on the **[!UICONTROL Commerce Co
 | Field | Required | Description |
 | --- | --- | --- |
 | Store View URL | Yes | URL corresponding to the store view (for example, `https://brand.example.com/fr/`). |
-| Environment ID | Yes | Unique identifier for the Adobe Commerce environment that the connection accesses. |
+| Environment ID | Yes | Unique identifier for the [!DNL Adobe Commerce] environment that the connection accesses. |
 | Website Code | Yes | Website Code of the Commerce website. |
 | Store Code | Yes | Store Code of the Commerce website. |
 | Store View Code | Yes | Store View of the Commerce website. |
-| Host Name | No | Host name of your Adobe Commerce instance. |
-| Adobe Commerce Endpoint | No | This field is not used. |
-| API Key | No | Authentication key used to securely access Adobe Commerce APIs. Treat it like any production credential. |
+| Host Name | Yes | Host name of your [!DNL Adobe Commerce] instance. |
 
 ### Review and apply catalog enrichment {#review-and-apply}
 
@@ -186,7 +181,7 @@ After you apply an update, suggestions move to **[!UICONTROL Fixed Suggestions]*
 
    ![Enriched Product Name](./assets/enriched-product-name.png)
 
-1. Optional: Select **[!UICONTROL Override LLM Optimizer provided Product Name]** if you want to keep a manually entered name instead.
+1. Optional: Select **[!UICONTROL Override Catalog Agent provided Product Name]** if you want to keep a manually entered name instead.
 
    Manual overrides affect how suggestions stay in sync with the catalog. For more information, see [Manual override in the Admin](#manual-override-in-the-admin).
 
@@ -196,7 +191,7 @@ After you apply an update, suggestions move to **[!UICONTROL Fixed Suggestions]*
 
    ![Enrich Product Description](./assets/enrich-product-description.png)
 
-1. Optional: Select **[!UICONTROL Override LLM Optimizer provided Description]** if you want to keep a manually entered description instead.
+1. Optional: Select **[!UICONTROL Override Catalog Agent provided Description]** if you want to keep a manually entered description instead.
 
   Manual overrides affect how suggestions stay in sync with the catalog. For more information, see [Manual override in the Admin](#manual-override-in-the-admin).
 
@@ -247,4 +242,37 @@ These rules help you know whether catalog enrichment, ingestion feeds, or Admin 
 - Coordinate with SEO and brand teams before bulk applying titles or descriptions.
 - Re-sync or re-analyze after major catalog imports so that suggestions reflect the current catalog state.
 
-<!--## Examples This section will provide examples of what enrichment before/after looks like:-->
+## Examples
+
+The following examples show how catalog enrichment turns raw technical attributes into shopper-focused, narrative product copy that LLMs can use to answer shopping questions.
+
+### Example: Coffee product with technical attributes
+
+A coffee retailer's catalog stores only the technical specifications for a medium roast coffee bean product: bean variety, origin region, processing method, roast level, and altitude range. These fields describe the product but do not communicate its value to a shopper, so an AI assistant has little to work with when answering a question like "what coffee has a smooth, low-acid flavor?"
+
+Catalog enrichment reads the technical attributes and reasons through how they interact to infer shopper-relevant characteristics:
+
+| Technical attribute | Inferred characteristic | Reasoning |
+| --- | --- | --- |
+| Honey Process, Medium Roast | Low acidity | Fruit mucilage left on the bean during honey processing suppresses acidity, and the medium roast breaks down residual acidic compounds. |
+| Honey Process, Arabica, Medium Roast | Hazelnut flavor | Fruit sugars from the mucilage combine with Arabica's natural nut notes, amplified at medium roast. |
+| Honey Process, Arabica | Rich, creamy mouthfeel | Oils absorbed from the mucilage during drying add viscosity and body. |
+| Honey Process, Altitude 900-1200m | Caramel undertones | Denser, high-altitude beans develop more complex sugars, deepened by honey processing. |
+
+Catalog enrichment applies these inferred characteristics to the product copy:
+
+- **Before**: "Medium Roast Coffee Beans - Arabica, Brazil Minas Gerais, Honey Process, 900-1200m"
+- **After**: "Arabica beans grown at 900-1200m in Brazil's Minas Gerais, honey processed and medium roasted, develop a naturally sweet, creamy mouthfeel with distinct hazelnut character, caramel undertones, and low acidity. A consistent, approachable specialty coffee best experienced through pour over."
+
+The updated name and description are saved directly to the Commerce catalog, so the storefront, LLM feeds, and other channels that read those fields all reflect the same enriched copy.
+
+### Example: Modular furniture configuration
+
+A furniture retailer sells a modular sectional couch where the product description lists only the configuration codes and fabric name, for example, `6 Standard Seats + 6 Standard Sides in Sapphire Navy Corded Velvet`. This shorthand is understandable to a returning customer but gives an AI assistant little context about how the product functions or what makes it durable or comfortable.
+
+Catalog enrichment expands the configuration and fabric attributes into a narrative description that explains what each component does and why it matters to a shopper:
+
+- **Before**: "6 Standard Seats + 6 Standard Sides in Sapphire Navy Corded Velvet"
+- **After**: "This configuration includes 6 Standard Seat Insert Sets and 6 Standard Side Inserts that function interchangeably as arms or backs, forming the modular building blocks of your layout. Each Seat features Standard Foam with three high-density layers designed to preserve lift and resist sagging. The Sapphire Navy Corded Velvet cover is as durable as it is luxurious, featuring textured cords that create a subtle sheen and a soft, plush feel. Covers are hand-sewn for a precise, tailored look and are machine washable and changeable, so your sectional can evolve with your space."
+
+Because the enriched description is written back to the Commerce catalog, it is available to AI bots crawling the product detail page as well as to any downstream channel or feed that consumes the product's catalog data, without changing the layout or design that shoppers see on the page.
