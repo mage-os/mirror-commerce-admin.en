@@ -86,6 +86,7 @@ Category product rules can speed up the process of assigning specific products t
     - `Less than`
     - `Less than or equal to`
     - `Contains`
+
 1. Enter the **[!UICONTROL Value]** that is to be matched.
 
    ![Add Condition to Category Rule](../catalog/assets/category-rule-create.png){width="500"}
