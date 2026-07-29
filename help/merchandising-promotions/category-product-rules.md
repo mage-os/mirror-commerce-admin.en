@@ -86,9 +86,6 @@ Category product rules can speed up the process of assigning specific products t
     - `Less than`
     - `Less than or equal to`
     - `Contains`
->[!NOTE]
->
->The **Contains** operator now accepts multiple comma-separated values, evaluated as an OR match. A single rule row can therefore match any of several terms instead of just one.
 1. Enter the **[!UICONTROL Value]** that is to be matched.
 
    ![Add Condition to Category Rule](../catalog/assets/category-rule-create.png){width="500"}
@@ -167,3 +164,7 @@ Category product rules can speed up the process of assigning specific products t
 - **[!UICONTROL Value]** - Specifies the value that the attribute must have to meet the condition.
 
 - **[!UICONTROL Logic]** - The Logic column is used to define multiple conditions, and appears only when another condition is added. The operators follow the rules of precedence for MySQL [boolean operators](https://dev.mysql.com/doc/refman/8.0/en/operator-precedence.html). Options: `AND` / `OR`
+- The [!UICONTROL Contains] operator accepts multiple comma-separated values and matches if the field contains at least one of them (logical OR).
+Example: Contains: casual, party matches any value that contains casual or party.
+
+Use this operator to combine several terms into one rule row instead of creating a separate row for each term.
