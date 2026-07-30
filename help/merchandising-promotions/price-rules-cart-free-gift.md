@@ -44,9 +44,9 @@ This example shows how to set up a [cart price rule](price-rules-cart.md) for a 
 
 *Buy X product, get Y product free*
 
-> [!NOTE]
+>[!NOTE]
 >
-> This feature is not supported on Luma storefronts. It is available only through GraphQL, to support Edge Delivery Services (EDS) storefronts.
+>This feature is not supported on Luma storefronts. It is available only through GraphQL, to support Edge Delivery Services (EDS) storefronts.
 
 
 
