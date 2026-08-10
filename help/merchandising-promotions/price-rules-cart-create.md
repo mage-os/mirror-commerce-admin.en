@@ -32,6 +32,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
 ---
+
 # Create a cart price rule
 
 Complete the following steps to add a rule, describe the conditions, and define the actions. Also complete the labels and test the rule. Price rule conditions can be based on cart or [product attributes](../catalog/product-attributes.md) or [Real-Time CDP Audiences](#use-real-time-cdp-audiences-to-set-a-condition), but not on [customizable options](../catalog/settings-advanced-custom-options.md).
