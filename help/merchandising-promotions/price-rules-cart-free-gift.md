@@ -2,7 +2,6 @@
 
 title: Cart price rule example - free gift
 description: Review an example of using a cart price rule to offer free gift promotion.
-exl-id: f7652254-ff01-44ff-a207-2d7cf2017517
 feature: Merchandising, Price Rules, Shopping Cart, Shipping/Delivery
 TQID: https://experienceleague.adobe.com/FR-q4Qj-ZDDzmfEKSvSj-BlwsM7ro-BqAE1yCppTaXE
 product_v2:
@@ -99,5 +98,5 @@ Free Gift is processed as a single action.
 
 Two Different Discount Type available
 
-  - **Price based** : gift line item is added at a price of 0.
+  - **Price based** : Gift line item is added at a price of 0.
   - **Discount Based** : A full discount is applied to the gift line item.
