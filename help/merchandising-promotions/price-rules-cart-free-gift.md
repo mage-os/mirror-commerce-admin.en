@@ -37,8 +37,6 @@ internal-label: Administration
 
 # Cart price rule example - free Gift
 
-{{ee-feature}}
-
 This example shows how to set up a [cart price rule](price-rules-cart.md) for a *Free Gift* promotion. The format of the discount is as follows:
 
 *Buy X product, get Y product free*
