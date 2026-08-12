@@ -40,8 +40,6 @@ This example shows how to set up a [cart price rule](price-rules-cart.md) for a 
 >
 >This feature is not supported on Luma storefronts. It is available only through GraphQL, to support Edge Delivery Services (EDS) storefronts.
 
-
-
 ## Step 1. Create a cart price rule
 
 Complete [Step 1](price-rules-cart.md#step-1-add-a-rule) of the cart price rule instructions to complete the rule information.
@@ -69,8 +67,6 @@ If left blank, the rule is triggered for every cart.
   - To prevent other discounts from being applied, set **[!UICONTROL Discard subsequent rules]** to `Yes`.
    Cart price rule - Free Gift{width="600" zoomable="yes"}
 2. Click **[!UICONTROL Save and Continue Edit]** and complete the rest of the rule as needed.
-
-
 
 ## Step 4. Complete the label
 
