@@ -30,8 +30,8 @@ nudge: true
     + [Company roles and permissions](account-company-roles-permissions.md)
     + [Define company structure](account-company-structure.md)
 + Company management {#company-management}
-    + [Overview](manage-companies.md)
-    + [Manage company hierarchies](manage-company-hierarchy.md)
+  + [Overview](manage-companies.md)
+  + [Manage company hierarchies](manage-company-hierarchy.md)
 + Shared catalogs {#shared-catalogs}
   + [Overview](catalog-shared.md)
   + Define shared catalogs {#define}

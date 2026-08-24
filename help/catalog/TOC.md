@@ -60,8 +60,8 @@ feature: Catalog Management
     + [Manage product images](product-image.md)
     + [Add product videos](product-video.md)
     + Manage product 3D models {#product-3d-model}
-        + [AR Viewer overview](ar-viewer-overview.md)
-        + [AR Viewer setup](ar-viewer-setup.md)
+      + [AR Viewer overview](ar-viewer-overview.md)
+      + [AR Viewer setup](ar-viewer-setup.md)
   + Manage pricing {#pricing}
     + [Price scope](catalog-price-scope.md)
     + [Advanced pricing](pricing-advanced.md)
