@@ -31,7 +31,7 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-last-update: 2024-04-09
+last-update: 2026-08-20
 ---
 # [!UICONTROL Advanced] > [!UICONTROL System]
 
