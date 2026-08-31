@@ -35,7 +35,7 @@ topic_v2:
     internal-label: Optimization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-last-update: 2023-05-22
+last-update: 2026-08-20
 ---
 # Downloadable product
 
@@ -228,7 +228,7 @@ When enabled, the _[!UICONTROL Downloadable Information]_ section has two parts.
 
    >[!NOTE]
    >
-   >You cannot use links to external resources as downloadable products. Valid link domains are predefined programmatically in the `env.php` file (see [env.php reference](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/config-reference-envphp.html) in the _Configuration Guide_).
+   >You cannot use links to external resources as downloadable products. Valid link domains are predefined programmatically in the `env.php` file (see [env.php reference](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/config-reference-envphp) in the _Configuration Guide_).
 
    - Set **[!UICONTROL Shareable]** to one of the following:
 
