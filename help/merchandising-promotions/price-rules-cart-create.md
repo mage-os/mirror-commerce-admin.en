@@ -78,6 +78,7 @@ Complete the following steps to add a rule, describe the conditions, and define 
       ![Cart price rule  - coupon settings](./assets/price-rule-cart-coupon-settings-ee.png){width="600" zoomable="yes"}
 
    - ![Magento Open Source](../assets/open-source.svg) (Magento Open Source only) Use the _Calendar_ (![Calendar icon](../assets/icon-calendar.png)) to choose the **[!UICONTROL From]** and **[!UICONTROL To]** date range for the promotion.
+   - ![Adobe Commerce](../assets/adobe-logo.svg) (Adobe Commerce as a Cloud Service only) Use the _Calendar_ (![Calendar icon](../assets/icon-calendar.png)) to choose the **[!UICONTROL From]** and **[!UICONTROL To]** date and time range for the promotion.
 
 1. Enter a number to define the **[!UICONTROL Priority]** of this price rule in relation to the Action settings of other price rules which are active at the same time.
 
