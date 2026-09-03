@@ -1,6 +1,6 @@
 ---
-title: Cart price rule example - free gift
-description: Review an example of using a cart price rule to offer free gift promotion.
+title: Free Gift promotions
+description: Learn how to configure a free gift promotion with cart price rules to offer a free gift when a set of conditions is met.
 feature: Merchandising, Price Rules, Shopping Cart, Shipping/Delivery
 TQID: https://experienceleague.adobe.com/FR-q4Qj-ZDDzmfEKSvSj-BlwsM7ro-BqAE1yCppTaXE
 product_v2:
@@ -30,7 +30,7 @@ topic_v2:
     internal-label: Administration
 ---
 
-# Cart price rule example - free Gift
+# Free gift promotion
 
 This example shows how to set up a [cart price rule](price-rules-cart.md) for a *Free Gift* promotion. The format of the discount is as follows:
 
@@ -40,7 +40,7 @@ This example shows how to set up a [cart price rule](price-rules-cart.md) for a 
 >
 >This feature is not supported on Luma storefronts. It is available only through GraphQL, to support Edge Delivery Services (EDS) storefronts.
 
-## Step 1. Create a cart price rule
+## Step 1. Create a cart price rule with a free gift promotion
 
 Complete [Step 1](price-rules-cart.md#step-1-add-a-rule) of the cart price rule instructions to complete the rule information.
 
@@ -79,7 +79,6 @@ Complete [Step 4](price-rules-cart.md) of the cart price rule instructions to en
 {{new-price-rule}}
 
 1. When your rule is complete, click **[!UICONTROL Save Rule]**.
-2. Test the rule to make sure that it works correctly.
 
 ## Variations
 
