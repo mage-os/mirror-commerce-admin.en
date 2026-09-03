@@ -36,7 +36,7 @@ The *Free Gift* promotion allows you to set a [cart price rule](price-rules-cart
 
 >[!NOTE]
 >
->This feature is not supported on Luma storefronts. It is accessible through GraphQL and available on Edge Delivery Services (EDS) storefronts.
+>This feature is not supported on Luma storefronts. It is accessible through [GraphQL](https://developer.adobe.com/commerce/webapi/graphql/schema/cart/mutations/select-free-gift/) and available on Edge Delivery Services (EDS) storefronts.
 
 ## Create a free gift promotion
 
