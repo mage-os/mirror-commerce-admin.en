@@ -1,6 +1,6 @@
 ---
 title: Source algorithms and reservations
-description: Learn about the Source Selection Algorithm and Reservations systems that run in the background to keep your salable quantities updated.
+description: Learn how the Source Selection Algorithm and reservations keep salable quantity accurate during checkout and shipment in [!DNL Inventory Management].
 exl-id: dcd63322-fb4c-4448-b6e7-0c54350905d7
 feature: Inventory, Shipping/Delivery
 TQID: https://experienceleague.adobe.com/x3UFGWtRSiodcnEF4Di3yFmR8GY8xoHSvVVsDg-J-qY
@@ -31,6 +31,7 @@ topic_v2:
     internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
+last-update: 2026-08-20
 ---
 # Source algorithms and reservations
 
@@ -213,7 +214,7 @@ The three `quantity` values sum up to 0 (-25 + 5 + 20). The system does not modi
 
 The `inventory_cleanup_reservations` cron job executes SQL queries to clear the reservation database table. By default, it runs daily at midnight, but you can configure the times and frequency. The cron job runs a script that queries the database to find complete reservation sequences in which the sum of quantity values is 0. When all reservations for a given product that originated on the same day (or other configured time) have been compensated, the cron job deletes the reservations all at once.
 
-The `inventory_reservations_cleanup` cron job is not the same as the `inventory.reservations.cleanup` message queue consumer. The consumer asynchronously deletes reservations by product SKU after a product has been removed, whereas the cron job clears the entire reservations table. The consumer is required when you enable the [**Synchronize with Catalog**](../configuration-reference/catalog/inventory.md) stock option in the store configuration. See [Manage message queues](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues.html){target="_blank"} in the _Configuration Guide_.
+The `inventory_reservations_cleanup` cron job is not the same as the `inventory.reservations.cleanup` message queue consumer. The consumer asynchronously deletes reservations by product SKU after a product has been removed, whereas the cron job clears the entire reservations table. The consumer is required when you enable the [**Synchronize with Catalog**](../configuration-reference/catalog/inventory.md) stock option in the store configuration. See [Manage message queues](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/message-queues/manage-message-queues){target="_blank"} in the _Configuration Guide_.
 
 Often, all initial reservations produced in a single day cannot be compensated that same day. This situation can occur when a customer places an order just before the cron job begins or makes the purchase with an offline payment method, such as a bank transfer. The compensated reservation sequences remain in the database until they are all compensated. This practice does not interfere with reservation calculations, because the total for each reservation is 0.
 

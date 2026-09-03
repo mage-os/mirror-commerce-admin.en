@@ -1,6 +1,6 @@
 ---
 title: Transfer inventory to source
-description: Learn how multi-source merchants can transfer product inventory from one source location to another.
+description: Transfer on-hand product quantities between [!DNL Inventory Management] sources when you change fulfillment locations.
 exl-id: 30438412-bc93-4e65-8b6a-5ddb50afa7ff
 feature: Inventory, Configuration
 TQID: https://experienceleague.adobe.com/HV6GQjHa88xgcSAi-LXhyqe7k2QW95VzQ8eG2mGlJ8I
@@ -27,6 +27,7 @@ level_v2:
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
+last-update: 2023-10-26
 ---
 # Transfer inventory to source
 

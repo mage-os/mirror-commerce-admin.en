@@ -1,6 +1,6 @@
 ---
-title: Install, update, and remove [!DNL Inventory Management]
-description: Learn how to manage the [!DNL Inventory Management] metapackage.
+title: "Install, update, and remove [!DNL Inventory Management]"
+description: Install, enable, disable, remove, or upgrade the [!DNL Inventory Management] metapackage.
 exl-id: d088ff35-c0e1-41c8-89fb-78180eaefbf7
 level: Experienced
 feature: Inventory, Install
@@ -33,7 +33,7 @@ These features and extensions were developed as part of the [Inventory project](
 
 [!DNL Inventory Management] installs in 2.3.x and 2.4.x releases of Adobe Commerce and Magento Open Source, with all features enabled by default. No additional steps are required for enabling these inventory features. Upgrades from v2.1.x or 2.2.x may require additional steps. See [Upgrade Inventory Management](#upgrade-inventory-management).
 
-Installation according to [Quick start on-premises installation](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/composer.html){target="_blank"} is recommended. Install with a metapackage to receive all [!DNL Inventory Management] modules.
+Installation according to [Quick start on-premises installation](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/composer){target="_blank"} is recommended. Install with a metapackage to receive all [!DNL Inventory Management] modules.
 
 The following line in the `composer.json` metapackage installs [!DNL Inventory Management]:
 
@@ -99,9 +99,9 @@ The [!DNL Inventory Management] installation process adds all modules to the `<M
 
 When installed, upgraded, or updated, the _[!UICONTROL Manage Stock]_ option in the Admin is enabled by default. This option enables inventory tracking and management, but does not affect module status. To disable modules, see the next section.
 
-For more information about configurations, see [Configure Inventory Management](configuration.md).
+For more information about configurations, see [Configure [!DNL Inventory Management]](configuration.md).
 
-## Disable Inventory Management
+## Disable [!DNL Inventory Management] {#disable-inventory-management}
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ You may want to disable [!DNL Inventory Management] modules to:
 * Speed up the upgrade process for merchants migrating from 2.0.x, 2.1.x, 2.2.x, or 2.3.x to 2.4.x.
 * Use custom or third-party inventory and order management system modules.
 
-See the [Enable or disable modules](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/manage-modules.html) page in the _Installation Guide_ for information about how to disable the applicable modules.
+See the [Enable or disable modules](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/manage-modules) page in the _Installation Guide_ for information about how to disable the applicable modules.
 
 When complete, the system provides a list of modules and values in `<Magento_installation_directory>/app/etc/config.php`, beginning with:
 
@@ -127,7 +127,7 @@ When complete, the system provides a list of modules and values in `<Magento_ins
 >
 >If you have the OMS Connector modules installed, make sure that you do not disable the `Magento_InventoryMessageBus` module, which is a Connector module. It is required to use the Connector with OMS.
 
-## Remove Inventory Management
+## Remove [!DNL Inventory Management] {#remove-inventory-management}
 
 >[!IMPORTANT]
 >
@@ -213,7 +213,7 @@ If you choose not to use the [!DNL Inventory Management] functionality, you can 
 
 When this change is complete, run composer install, and it automatically removes these Inventory Management modules.
 
-## Upgrade Inventory Management
+## Upgrade [!DNL Inventory Management] {#upgrade-inventory-management}
 
 ### Previous [!DNL Commerce] versions
 
@@ -254,5 +254,5 @@ For the latest, update your metapackage version:
 
 See the following guides for more information about Commerce upgrades:
 
-* [Commerce Update Guide](https://experienceleague.adobe.com/docs/commerce-operations/upgrade-guide/overview.html){target="_blank"}
-* [Enable or disable modules](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/manage-modules.html){target="_blank"}
+* [Commerce Update Guide](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/overview){target="_blank"}
+* [Enable or disable modules](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/manage-modules){target="_blank"}

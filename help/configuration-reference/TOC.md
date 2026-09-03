@@ -74,8 +74,9 @@ nudge: true
   - [Web API](./services/magento-web-api.md)
   - [Commerce Services](./services/saas.md)
   - [OAuth](./services/oauth.md)
+  - [Email Suppression](./services/email-suppression.md)
 - Advanced {#advanced}
   - [Admin](./advanced/admin.md)
   - [System](./advanced/system.md)
   - [Developer](./advanced/developer.md)
-- [Return to Admin User Guides](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
+- [Return to Admin User Guides](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)

@@ -60,8 +60,8 @@ feature: Catalog Management
     + [Manage product images](product-image.md)
     + [Add product videos](product-video.md)
     + Manage product 3D models {#product-3d-model}
-        + [AR Viewer overview](ar-viewer-overview.md)
-        + [AR Viewer setup](ar-viewer-setup.md)
+      + [AR Viewer overview](ar-viewer-overview.md)
+      + [AR Viewer setup](ar-viewer-setup.md)
   + Manage pricing {#pricing}
     + [Price scope](catalog-price-scope.md)
     + [Advanced pricing](pricing-advanced.md)
@@ -93,4 +93,4 @@ feature: Catalog Management
     + [Create and delete attributes](attribute-product-create.md)
     + [Bulk updates](bulk-product-attribute-update.md)
     + [Attribute sets](attribute-sets.md)
-+ [Return to Admin User Guides](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html)
++ [Return to Admin User Guides](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home)
