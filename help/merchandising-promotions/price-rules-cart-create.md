@@ -82,7 +82,7 @@ Complete the following steps to add a rule, describe the conditions, and define 
 
 1. Enter a number to define the **[!UICONTROL Priority]** of this price rule in relation to the Action settings of other price rules which are active at the same time.
 
-   When multiple cart rules or coupons apply to the same product, the rule with the highest priority (lowest number) is applied first. Rules with the same priority don’t combine; they apply separately based on rule ID. To control the order in which discounts are applied, assign unique priorities, and consider using the [Discard Subsequent Price Rules](#step-3-define-the-actions) in the Actions step to prevent discount stacking.
+   When multiple cart rules or coupons apply to the same product, the rule with the highest priority (lowest number) is applied first. Rules with the same priority don't combine; they apply separately based on rule ID. To control the order in which discounts are applied, assign unique priorities, and consider using the [Discard Subsequent Price Rules](#step-3-define-the-actions) in the Actions step to prevent discount stacking.
 
 1. To apply the rule to published [RSS feeds](social-rss.md#rss-feeds), set **Public In RSS Feed** to `Yes`.
 
@@ -256,7 +256,7 @@ The shopping cart price rule actions describe how prices are updated when the co
    |`Fixed amount discount` |Discounts item by subtracting a fixed amount from the original price of each qualifying item in the cart. For example: Enter `10` in [!UICONTROL Discount Amount] for an updated price that is $10 less than the original price. |
    |Fixed amount discount for whole cart |Discounts the entire cart by subtracting a fixed amount from the cart total. For example: Enter 10 in [!UICONTROL Discount Amount] to subtract $10 from the cart total. By default, the discount applies only to the cart subtotal. To apply the discount to the subtotal and shipping separately, use the _[!UICONTROL Apply to Shipping Amount]_ option. |
    |`Buy X get Y free` |Defines a quantity X that the customer must purchase to receive a quantity Y **of the same product/variation** for free. (The [!UICONTROL Discount Amount] is Y.) A total quantity of X+Y of that same item must be present in/added to the cart for the discount to be applied. |
-   |`Free Gift` |Adds a free gift product to the cart when the rule conditions are met. Select the product to give away and the quantity to add, at no cost, to the cart. <br/><br/>**Note:** ![Adobe Commerce](../assets/adobe-logo.svg) This is an exclusive feature that is available only in Adobe Commerce and is not available in Magento Open Source. ([Learn more](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home#product-editions)) <br/><br/>This feature is not supported on Luma storefronts. It is available only through GraphQL, to support Edge Delivery Services (EDS) storefronts. |
+   |`Free Gift` |Adds a free gift product to the cart when the rule conditions are met. Select the free product and the quantity to add to the cart. <br/><br/>**Note:** ![Adobe Commerce](../assets/adobe-logo.svg) This is an exclusive feature that is available only in Adobe Commerce and is not available in Magento Open Source. ([Learn more](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home#product-editions)) <br/><br/>This feature is not supported on Luma storefronts. It is accessible through GraphQl and available on Edge Delivery Services (EDS) storefronts. |
 
    {style="table-layout:auto"}
 

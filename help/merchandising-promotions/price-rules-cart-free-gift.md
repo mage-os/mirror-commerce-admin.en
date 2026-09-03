@@ -32,59 +32,54 @@ topic_v2:
 
 # Free gift promotion
 
-This example shows how to set up a [cart price rule](price-rules-cart.md) for a *Free Gift* promotion. The format of the discount is as follows:
-
-*Buy X product, get Y product free*
+The *Free Gift* promotion allows you to set a [cart price rule](price-rules-cart.md) that adds a free item to the cart under specific conditions.
 
 >[!NOTE]
 >
->This feature is not supported on Luma storefronts. It is available only through GraphQL, to support Edge Delivery Services (EDS) storefronts.
+>This feature is not supported on Luma storefronts. It is accessible through GraphQL and available on Edge Delivery Services (EDS) storefronts.
 
-## Step 1. Create a cart price rule with a free gift promotion
+## Create a free gift promotion
 
-Complete [Step 1](price-rules-cart.md#step-1-add-a-rule) of the cart price rule instructions to complete the rule information.
+This section describes how to create a free gift promotion using the following format:
 
-## Step 2. Define the conditions
+**Buy X product, get Y product free**
 
-Complete [Step 2](price-rules-cart.md#step-2-describe-the-conditions) of the cart instructions to define the conditions for the price rule. This is the first of two conditions that can be added to the rule, and determines when the rule is triggered. It can be based on a combination of the following:
+1. [Create a cart price rule](price-rules-cart.md#step-1-add-a-rule) with a free gift promotion.
 
-- Product attributes
-- Products
-- Cart attributes
-- Adobe Commerce (Adobe Commerce only) Customer segments
+1. [Describe the conditions](price-rules-cart.md#step-2-describe-the-conditions) of the cart instructions to define the conditions for the price rule. This is the first of multiple conditions that can be added to the rule, and determines when the rule is triggered. It can be based on a combination of the following:
 
-If left blank, the rule is triggered for every cart.
+   - Product attributes
+   - Products
+   - Cart attributes
+   - Adobe Commerce Customer segments
 
-![Cart price rule - conditions] [./assets/conditions.png]{width="600" zoomable="yes"}
+   If left blank, the rule is triggered for every cart.
 
-## Step 3. Define the actions
+   ![Cart price rule - conditions](./assets/conditions.png){width="600" zoomable="yes"}
 
-1. Scroll down and expand ![Expansion selector] (../assets/icon-display-expand.png) the **[!UICONTROL Actions]** section and do the following:
-  - Set **[!UICONTROL Apply]** to `Free Gift`.
-  - In **[!UICONTROL Gift SKU(s)]**, select one or more SKUs that the customer can choose as a free gift.
-  - Set **[!UICONTROL Free Gift Discount Type]** to **[!UICONTROL Price Based]**  or **[!UICONTROL Discount Based]**.
-  - For **[!UICONTROL  Gift Qty ]**, enter the quantity of the free gift that the customer receives. for this example, enter `2`.
-  - To prevent other discounts from being applied, set **[!UICONTROL Discard subsequent rules]** to `Yes`.
-   Cart price rule - Free Gift{width="600" zoomable="yes"}
-2. Click **[!UICONTROL Save and Continue Edit]** and complete the rest of the rule as needed.
+1. Define the actions for the cart price rule:
 
-## Step 4. Complete the label
+   1. Expand ![Expansion selector] (../assets/icon-display-expand.png) the **[!UICONTROL Actions]** section and enter the following information:
+   
+     - Set **[!UICONTROL Apply]** to `Free Gift`.
+     - In **[!UICONTROL Gift SKU(s)]**, select one or more SKUs that the customer can choose as a free gift.
+     - Set **[!UICONTROL Free Gift Discount Type]** to **[!UICONTROL Price Based]** or **[!UICONTROL Discount Based]**.
+     - In **[!UICONTROL Gift Qty ]**, enter the quantity of the free gift that the customer receives. For example, enter `2` if you want the customer to receive two free items.
+     - To prevent other discounts from being applied, set **[!UICONTROL Discard subsequent rules]** to `Yes`.
+   
+   1. Click **[!UICONTROL Save and Continue Edit]** and complete the rest of the rule as needed.
 
-Complete [Step 4](price-rules-cart.md) of the cart price rule instructions to enter the label that appears during checkout.
+1. [Complete the label](price-rules-cart.md) of the cart price rule instructions to enter the label that appears during checkout.
 
-![Cart price rule - Free Gift Label] (./assets/free-gift-promotion-label.png) {width="600" zoomable="yes"}
+  ![Cart price rule - Free Gift Label](./assets/free-gift-promotion-label.png){width="600" zoomable="yes"}
 
-## Step 5: Save the rule
-
-{{new-price-rule}}
+  {{new-price-rule}}
 
 1. When your rule is complete, click **[!UICONTROL Save Rule]**.
 
 ## Variations
 
-Free Gift is processed as a single action. 
+You can customize cart price rules many different ways. The Free Gift feature can be configured with two different discount types:
 
-Two Different Discount Type available
-
-  - **Price based** : Gift line item is added at a price of 0.
+  - **Price based** : A gift line item is added at a price of `0`.
   - **Discount Based** : A full discount is applied to the gift line item.

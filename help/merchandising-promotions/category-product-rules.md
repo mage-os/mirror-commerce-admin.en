@@ -162,7 +162,7 @@ Category product rules can speed up the process of assigning specific products t
 
 - **[!UICONTROL Operator]** - Specifies the operator that is applied to the attribute value to meet the  condition. Unless an operator is specified, `Equal` is used as the default. Options: `Equal`, `Not equal`, `Greater than`, `Greater than or equal to`, `Less than`, `Less than or equal to`, and `Contains`
 
-   The **[!UICONTROL Contains]** operator accepts multiple comma-separated values and matches if the attribute value contains at least one of them (logical OR). Example: **[!UICONTROL Contains]**: `casual, party` matches any value that contains `casual` or `party`.
+   The **[!UICONTROL Contains]** operator accepts multiple comma-separated values and matches if the attribute value contains at least one of them, similar to a logical OR operation. For example, **[!UICONTROL Contains]**: `casual, party` matches any value that contains `casual` or `party`.
 
    Use this operator to combine several terms into one rule row instead of creating a separate row for each term.
 
