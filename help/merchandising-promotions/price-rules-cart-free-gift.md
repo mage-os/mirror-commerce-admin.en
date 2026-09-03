@@ -74,7 +74,7 @@ Complete [Step 4](price-rules-cart.md) of the cart price rule instructions to en
 
 ![Cart price rule - Free Gift Label] (./assets/free-gift-promotion-label.png) {width="600" zoomable="yes"}
 
-## Step 5: Save and test the rule
+## Step 5: Save the rule
 
 {{new-price-rule}}
 
