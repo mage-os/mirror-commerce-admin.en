@@ -4,6 +4,28 @@
 
 This section contains the changes made in the last 60 days. We exclude all minor updates, such as copy editing, from this list.
 
+### August 31, 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Removed Adobe Commerce 2.4.8-p5 from the list of supported versions for <a href="https://experienceleague.adobe.com/en/docs/commerce-admin/b2b/release-notes#b2b-v152-p5">B2B 1.5.2-p5</a>. 2.4.8 customers should use B2B version 1.5.3 instead.</p>
+</td>
+      <td>
+        Technical
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-admin.en/commit/fab7dc8f780fa68c147a06752dc96bd7b03444a2">commit</a></td>
+    </tr>
+  </tbody>
+</table>
+
 ### August 4, 2026
 
 <table style="table-layout:auto;">
@@ -66,28 +88,6 @@ This section contains the changes made in the last 60 days. We exclude all minor
         New topic
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-admin.en/commit/6cd9281329fd909e38e4bbf41159eadfed2f9ad3">commit</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### June 30, 2026
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Type</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Added <a href="https://experienceleague.adobe.com/en/docs/commerce-admin/start/commerce-account/commerce-system-admin-account">Update System Administrator access</a> with guidance for managing System Administrator assignments in Adobe Admin Console.</p>
-</td>
-      <td>
-        Feedback
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-admin.en/commit/927b633eaa9af471440cfb950b429a60b3df94a8">commit</a></td>
     </tr>
   </tbody>
 </table>
