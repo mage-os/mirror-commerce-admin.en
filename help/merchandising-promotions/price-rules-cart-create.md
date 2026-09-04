@@ -78,10 +78,11 @@ Complete the following steps to add a rule, describe the conditions, and define 
       ![Cart price rule  - coupon settings](./assets/price-rule-cart-coupon-settings-ee.png){width="600" zoomable="yes"}
 
    - ![Magento Open Source](../assets/open-source.svg) (Magento Open Source only) Use the _Calendar_ (![Calendar icon](../assets/icon-calendar.png)) to choose the **[!UICONTROL From]** and **[!UICONTROL To]** date range for the promotion.
+   - ![Adobe Commerce](../assets/adobe-logo.svg) (Adobe Commerce as a Cloud Service only) Use the _Calendar_ (![Calendar icon](../assets/icon-calendar.png)) to choose the **[!UICONTROL From]** and **[!UICONTROL To]** date and time range for the promotion.
 
 1. Enter a number to define the **[!UICONTROL Priority]** of this price rule in relation to the Action settings of other price rules which are active at the same time.
 
-   When multiple cart rules or coupons apply to the same product, the rule with the highest priority (lowest number) is applied first. Rules with the same priority don’t combine; they apply separately based on rule ID. To control the order in which discounts are applied, assign unique priorities, and consider using the [Discard Subsequent Price Rules](#step-3-define-the-actions) in the Actions step to prevent discount stacking.
+   When multiple cart rules or coupons apply to the same product, the rule with the highest priority (lowest number) is applied first. Rules with the same priority don't combine; they apply separately based on rule ID. To control the order in which discounts are applied, assign unique priorities, and consider using the [Discard Subsequent Price Rules](#step-3-define-the-actions) in the Actions step to prevent discount stacking.
 
 1. To apply the rule to published [RSS feeds](social-rss.md#rss-feeds), set **Public In RSS Feed** to `Yes`.
 
@@ -368,8 +369,8 @@ Watch this video to learn about creating cart price rules:
 |[!UICONTROL Uses per Customer]|Determines how many times that the cart price rule can be used by the same registered customer who belongs to any selected customer group. Does not apply to guest shoppers who are members of the NOT LOGGED IN customer group, or to customers who shop without logging in to their accounts. For no limit, leave blank.|
 |[!UICONTROL Priority]|A number that indicates the priority of this rule in relation to others. Priorities from the highest to the lowest are `0,1,2,3...`|
 |[!UICONTROL Public in RSS Feed]|Determines if the promotion is included in your store's public RSS feed. Options:  `Yes` / `No`|
-|[!UICONTROL From]|![Magento Open Source](../assets/open-source.svg) (Magento Open Source only) The first date the coupon can be used.|
-|[!UICONTROL To]|![Magento Open Source](../assets/open-source.svg) (Magento Open Source only) The last date the coupon can be used.|
+|[!UICONTROL From]|![Magento Open Source](../assets/open-source.svg) (Magento Open Source only) The first date the coupon can be used.<br><br>![Adobe Commerce](../assets/adobe-logo.svg) ([!DNL Adobe Commerce as a Cloud Service] only) The date and time the coupon can be used.|
+|[!UICONTROL To]|![Magento Open Source](../assets/open-source.svg) (Magento Open Source only) The last date the coupon can be used.<br><br>![Adobe Commerce](../assets/adobe-logo.svg) ([!DNL Adobe Commerce as a Cloud Service] only) The last date and time the coupon can be used.|
 
 {style="table-layout:auto"}
 
