@@ -100,7 +100,8 @@ Configure the default configuration options for product and stock for your websi
 
    >[!NOTE]
    >
-   >The `sourceAvailability` query is disabled by default because it discloses which sources stock a SKU. Exact quantities remain masked until the source quantity reaches the **[!UICONTROL Only X left Threshold]** set in the _[!UICONTROL Stock Options]_ section.
+   >The `sourceAvailability` query is disabled by default because it discloses which sources stock a SKU. Exact quantities remain masked until the source quantity reaches the **[!UICONTROL Only X left Threshold]** set in the _[!UICONTROL Stock Options]_ section. Each inventory source has a **[!UICONTROL Visible on Storefront]** flag that is off by default. A source's stock is never returned until a merchant enables it. To set it, go to **[!UICONTROL Stores]** > _[!UICONTROL Inventory]_ > **[!UICONTROL Sources]**, edit a source, and turn on **[!UICONTROL Visible on Storefront]**.
+
 
 1. Expand ![Expansion selector](../assets/icon-display-expand.png) the **[!UICONTROL Admin bulk operations]** section and set the options:
 
