@@ -83,7 +83,7 @@ topic_v2:
 
 |Field|[Scope](../../getting-started/websites-stores-views.md#scope-settings)|Description|
 |--- |--- |--- |
-|[!UICONTROL Enable sourceAvailability GraphQL Query]|Store View|If set to `Yes`, the storefront [`sourceAvailability`](https://developer.adobe.com/commerce/webapi/graphql/schema/products/queries/source-availability){target="_blank"} query returns per-source stock for the store's sales channel. Options: `Yes` / `No`. Default: `No`, because the query discloses which sources stock a SKU. While disabled, the query returns an error. Exact quantities remain masked until the source quantity reaches the **[!UICONTROL Only X left Threshold]** set in the [Stock Options](#stock-options) section.|
+|[!UICONTROL Enable sourceAvailability GraphQL Query]|Store View|If set to `Yes`, the storefront [`sourceAvailability`](https://developer.adobe.com/commerce/webapi/graphql/schema/products/queries/source-availability){target="_blank"} query returns per-source stock for the store's sales channel. Options: `Yes` / `No`. Default: `No`, because the query discloses which sources stock a SKU. While disabled, the query returns an error. Exact quantities returned by the query remain masked until the source quantity reaches the **[!UICONTROL Only X left Threshold]** set in the [Stock Options](#stock-options) section.|
 
 {style="table-layout:auto"}
 
