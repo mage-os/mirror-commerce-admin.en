@@ -46,6 +46,7 @@ nudge: true
     - [Cart price rules overview](price-rules-cart.md)
     - [Create a cart price rule](price-rules-cart-create.md)
     - [Coupon codes](price-rules-cart-coupon.md)
+    - [Free Gift promotions](price-rules-cart-free-gift.md)
     - [Scheduled changes for cart price rules](price-rule-cart-scheduled-changes.md)
     - [Example: free shipping promotion](price-rules-cart-free-shipping.md)
     - [Example: buy this get that free](price-rules-cart-buy-this-get-that.md)
